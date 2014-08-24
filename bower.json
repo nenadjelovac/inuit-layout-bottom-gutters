@@ -1,0 +1,23 @@
+{
+  "name": "inuit-layout-bottom-gutters",
+  "version": "0.1.0",
+  "homepage": "https://github.com/nenadjelovac/inuit-layout-bottom-gutters",
+  "authors": [
+    "Nenad Jelovac <nenad@css-guy.com>"
+  ],
+  "description": "An extension of inuit-layout that adds bottom gutter to layout items.",
+  "main": "_objects.layout-bottom-gutters.scss",
+  "keywords": [
+    "inuit",
+    "oocss",
+    "css",
+    "framework",
+    "extension"
+  ],
+  "license": "Apache",
+  "dependencies": {
+    "inuit-defaults": "~0.2.1",
+    "inuit-mixins": "~0.2.3",
+    "inuit-layout": "~0.3.2"
+  }
+}

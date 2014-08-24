@@ -1,0 +1,148 @@
+/*------------------------------------*\
+	#LAYOUT-BOTTOM-GUTTERS
+\*------------------------------------*/
+
+/**
+ * This extension uses an `:after` pseudo element with negative top margin
+ * applied to `.layout` object to negate layout items bottom margin.
+ */
+
+/**
+ * Default layout.
+ *
+ * 1. Make sure `:after` pseudo element takes the whole width of its parent.
+ * 2. Negate layout item's bottom margin.
+ */
+.#{$inuit-layout-namespace}layout,
+%#{$inuit-layout-namespace}layout {
+
+    &:after {
+        content: "";
+        display: block; /* [1] */
+        margin-top: -($inuit-layout-gutter); /* [2] */
+    }
+
+}
+
+    .#{$inuit-layout-namespace}layout__item,
+    %#{$inuit-layout-namespace}layout__item {
+        margin-bottom: $inuit-layout-gutter;
+    }
+
+
+
+
+
+@if ($inuit-enable-layout--tiny == true) {
+
+    /**
+     * Layouts with tiny gutters.
+     */
+
+    .#{$inuit-layout-namespace}layout--tiny,
+    %#{$inuit-layout-namespace}layout--tiny {
+
+        &:after {
+            margin-top: -($inuit-layout-gutter--tiny);
+        }
+
+        > .#{$inuit-layout-namespace}layout__item,
+        > %#{$inuit-layout-namespace}layout__item {
+            margin-bottom: $inuit-layout-gutter--tiny;
+        }
+
+    }
+
+}
+
+@if ($inuit-enable-layout--small == true) {
+
+    /**
+     * Layouts with small gutters.
+     */
+
+    .#{$inuit-layout-namespace}layout--small,
+    %#{$inuit-layout-namespace}layout--small {
+
+        &:after {
+            margin-top: -($inuit-layout-gutter--small);
+        }
+
+        > .#{$inuit-layout-namespace}layout__item,
+        > %#{$inuit-layout-namespace}layout__item {
+            margin-bottom: $inuit-layout-gutter--small;
+        }
+
+    }
+
+}
+
+@if ($inuit-enable-layout--large == true) {
+
+    /**
+     * Layouts with large gutters.
+     */
+
+    .#{$inuit-layout-namespace}layout--large,
+    %#{$inuit-layout-namespace}layout--large {
+
+        &:after {
+            margin-top: -($inuit-layout-gutter--large);
+        }
+
+        > .#{$inuit-layout-namespace}layout__item,
+        > %#{$inuit-layout-namespace}layout__item {
+            margin-bottom: $inuit-layout-gutter--large;
+        }
+
+    }
+
+}
+
+@if ($inuit-enable-layout--huge == true) {
+
+    /**
+     * Layouts with huge gutters.
+     */
+
+    .#{$inuit-layout-namespace}layout--huge,
+    %#{$inuit-layout-namespace}layout--huge {
+
+        &:after {
+            margin-top: -($inuit-layout-gutter--huge);
+        }
+
+        > .#{$inuit-layout-namespace}layout__item,
+        > %#{$inuit-layout-namespace}layout__item {
+            margin-bottom: $inuit-layout-gutter--huge;
+        }
+
+    }
+
+}
+
+
+
+
+
+@if ($inuit-enable-layout--flush == true) {
+
+    /**
+     * Layouts with no gutters.
+     */
+
+    .#{$inuit-layout-namespace}layout--flush,
+    %#{$inuit-layout-namespace}layout--flush {
+
+        &:after {
+            margin-top: 0;
+        }
+
+        > .#{$inuit-layout-namespace}layout__item,
+        > %#{$inuit-layout-namespace}layout__item {
+            margin-bottom: 0;
+        }
+
+    }
+
+}
